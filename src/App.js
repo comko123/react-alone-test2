@@ -1,7 +1,3 @@
-/*eslint-disable*/
-// import Ate from "./test2/Ate";
-// import Bte from "./test2/Bte";
-// import Dte from "./test2/Dte";
 import { useState } from "react"
 import InputTest from "./test/InputTest"
 import MothPage from "./RTKtest/MothPage"
