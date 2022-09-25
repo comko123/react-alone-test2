@@ -9,6 +9,7 @@ import PravitePage from "./RTKtest/PravitePage"
 import HomePage from "./test3/HomePage"
 import MyClothing from "./refactoring/MyClothing"
 import Information from "./refactoring/Information"
+import TestCookie from "./test4/TestCookie"
 const priceData = (event,setPrice) => {setPrice(event.target.value)}
 export default function App() {
 const [price , setPrice] = useState(null);
@@ -20,6 +21,7 @@ return (
     <Route path="/shop" element={<HomePage/>}/>
     <Route path="/reft" element={<MyClothing/>}/>
     <Route path="/refa" element={<Information/>}/>
+    <Route path="/cookie" element={<TestCookie/>}/>
     <Route path="/test" element={<InputTest price = {price}/>}>
     <Route path = "buy/:state" element={ <NumberFormat thousandSeparator={true} className="price" placeholder="구매가격" onBlur={(e)=>{priceData(e,setPrice)}}/>}/>
     <Route path = "sell/:state" element={<NumberFormat thousandSeparator={true} className="price" placeholder="판매가격" onBlur={(e)=>priceData(e,setPrice)}/>}/>
