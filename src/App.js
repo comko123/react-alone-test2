@@ -12,13 +12,16 @@ import Information from "./refactoring/Information"
 import TestCookie from "./test4/TestCookie"
 import {ReactQueryDevtools} from "react-query/devtools"
 import Location from "./test5/Location"
+import Arraytest from "./test6/Arraytest"
 const priceData = (event,setPrice) => {setPrice(event.target.value)}
 export default function App() {
-const [price , setPrice] = useState(null);
+const [price , setPrice] = useState(null)
+console.log(1)
 return (<>
 <ReactQueryDevtools initialIsOpen={true}/>
     <Routes>
     <Route path="/" element={<PublicPage/>}/>
+    <Route path="/arr" element={<Arraytest/>} /> 
     <Route path="/moth" element={<MothPage/>}/>
     <Route path="/weth" element={<WethPage/>}/>
     <Route path="/shop" element={<HomePage/>}/>
