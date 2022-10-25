@@ -30,6 +30,5 @@ useEffect(()=>{axiosing(setData)},[])
     <h1 style = {{"backgroundColor":"tomato"}}>Array Proporty</h1>
     <input type = "button" value = "arry" onClick = {()=>console.log(selector.orStock)}/>&nbsp;&nbsp;&nbsp;
     <input type = "button" value = "aded" onClick = {()=>dispatch(stack("string"))}/>
-    </div>)
-}
+    </div>)}
 export default PublicPage

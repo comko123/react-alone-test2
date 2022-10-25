@@ -21,8 +21,7 @@ export default function  Information() {
     const season =userClothingModify[userMof[index]]
     return <div key={index}>
     {userSeasonStyle(userInfo[index],infoUser[item],season[Object.keys(season)],season)}
-</div>})}
-<br/>
+</div>})}<br/>
 <form onSubmit = {e=>e.preventDefault()}>
 <h3>비밀번호 변경</h3>
 현재 비밀번호&nbsp;<input type="password" />
@@ -33,6 +32,4 @@ export default function  Information() {
 확인
 <br/>
 <input type = "button" value = "비밀번호 수정"/>
-<br/>
-</form>
-    </>);}
+<br/></form></>)}

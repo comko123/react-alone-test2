@@ -7,6 +7,6 @@ const WethPage = () => {
     <h1 style = {{"backgroundColor":"aqua"}}>Weth Page</h1> 
     <br/>
     <h1 style = {{"backgroundColor":"orange"}}>{!!text.title?text.title:text.a}</h1>
-   </div>)
-} 
+   </div>)}
+ 
 export default WethPage

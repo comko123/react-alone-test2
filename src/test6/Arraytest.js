@@ -1,5 +1,5 @@
 import axios from "axios"
-import { useState } from "react"
+import { useState,useRef } from "react"
 import {useNavigate } from "react-router-dom"
 
 const current_date = new Date()
@@ -47,7 +47,7 @@ const selectUserData = {
  const userSelect = {성별:[],연령:[],신장:[],체중:[],스타일:[]}
 const basicSetting = Object.keys(selectUserData)
 const userSetting = Object.keys(inputTypeAndPalcehorder)
-const styleObject = Object.keys(selectUserCheck)
+// const styleObject = Object.keys(selectUserCheck)
 const signUpFunction = async(result,setResult,navigate) => {
   const {id,password,password2,email,nickname} = userClientInput
   const {성별,연령,신장,체중,스타일} = userSelect
@@ -76,18 +76,18 @@ return (<div key = {index}>{childInformation}
 }}/> <br/></div>)})}</div>)
 }
 
-const userInFormationCheckBox = (...rest) =>{
-  return(<div key = {rest[0]}>
-  <h3>{rest[0]}</h3>
-  {rest[1].map((clothing,index)=>{
-  return (<div key = {index}>{clothing}<input type ="checkbox" 
-  value = {rest[0]+`/${clothing}`} onClick ={e=>
-    {if(e.target.checked===true){
-     rest[2].push(e.target.value)  
-    rest[2].filter((element,index)=>rest[2].indexOf(element)===index)}
-      else{rest[2].splice(rest[2].indexOf(e.target.value),1)}
-  }}/> <br/></div>)})}</div>)
-}
+// const userInFormationCheckBox = (...rest) =>{
+//   return(<div key = {rest[0]}>
+//   <h3>{rest[0]}</h3>
+//   {rest[1].map((clothing,index)=>{
+//   return (<div key = {index}>{clothing}<input type ="checkbox" 
+//   value = {rest[0]+`/${clothing}`} onClick ={e=>
+//     {if(e.target.checked===true){
+//      rest[2].push(e.target.value)  
+//     rest[2].filter((element,index)=>rest[2].indexOf(element)===index)}
+//       else{rest[2].splice(rest[2].indexOf(e.target.value),1)}
+//   }}/> <br/></div>)})}</div>)
+// }
 
 const userInFormationInput = (...rest) => {
   return(
@@ -101,14 +101,17 @@ const userInFormationInput = (...rest) => {
 export default function Arraytest (){
   const trans = useNavigate()
   const [result,setResult] = useState(null)
+  const ref = useRef()
 return(<>
   <h1>회원가입</h1>
   <form onSubmit={e=>e.preventDefault()}>
   {userSetting.map((item,index)=>userInFormationInput(inputTypeAndPalcehorder[userSetting[index]][0],item,userClientInput[item],index))}
   {basicSetting.map((item,index)=>userInFormationRadio(selectUserData[item],item,userSelect[item],index))}
-  {styleObject.map((item,index)=>userInFormationCheckBox(item,selectUserCheck[item],userSelect[styleObject[0]],index))}
+  {/* {styleObject.map((item,index)=>userInFormationCheckBox(item,selectUserCheck[item],userSelect[styleObject[0]],index))} */}
   <br/>
  <input type="submit" value="가입"onClick={()=>{signUpFunction(result,setResult,trans)}}/>   
   <br/> <br/>
  <input type="button" value="홈페이지"onClick={()=>trans('/')}/>  
-  </form></>)}
+  </form>
+  <div ref={ref} onClick = {()=>console.log(ref)}>123</div>
+  </>)}

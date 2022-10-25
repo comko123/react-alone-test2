@@ -1,12 +1,11 @@
-import { configureStore ,createSlice} from "@reduxjs/toolkit";
+import { configureStore ,createSlice} from "@reduxjs/toolkit"
 
 const data = createSlice({
 name : "data",
 initialState : {a:30,b:20},
 reducers:{
     inputData(state,want){return state = want.payload}
-}
-})
+}})
 
 const stock = createSlice({
     name:"stock",
@@ -22,5 +21,4 @@ export default configureStore({
     reducer:{
    orUser : data.reducer,
    orStock : stock.reducer
-    }
-})
+    }})

@@ -7,6 +7,5 @@ const PravitePage = () => {
     <h1 style = {{"backgroundColor" : "black" ,"color":"white"}}>Pravite Page</h1> 
     <br/>
     <h1 style = {{"backgroundColor":"orange"}}>{!!text.title?text.title:text.a}</h1>
-    </div>)
-}
+    </div>)}
 export default PravitePage

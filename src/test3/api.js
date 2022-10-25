@@ -6,8 +6,7 @@ const pushing = (parameter) => {
     for(let i=0; i<6; i++){
         const favor = parameter[i]
         favorite.push(favor)
-        }
-}
+        }}
 
 export const productAxios = async(storageBox,text) => {
 const {data:{items}} = await axios("/v1/search/shop.json",

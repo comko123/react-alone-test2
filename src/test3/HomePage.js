@@ -201,6 +201,5 @@ const HomePage = () => {
   </Child>
   </Popularity>
 
-    </Parents>)
-}
+    </Parents>)}
 export default HomePage

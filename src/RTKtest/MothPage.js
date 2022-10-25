@@ -7,6 +7,5 @@ const MothPage = () => {
     <h1 style = {{"backgroundColor":"tomato"}}>Moth Page</h1> 
     <br/>
     <h1 style = {{"backgroundColor":"orange"}}>{!!text.title?text.title:text.a}</h1>
-    </div>)
-}
+    </div>)}
 export default MothPage

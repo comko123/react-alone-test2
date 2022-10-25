@@ -15,6 +15,5 @@ const TestCookie = () => {
 return <>
 <h1>clean up</h1><br/>
 <input type = "button" value = "제출" onClick = {()=>navi('/refa')}/>
-</>
-}
+</>}
 export default TestCookie

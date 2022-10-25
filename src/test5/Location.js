@@ -28,6 +28,5 @@ const Location = () => {
 // console.log(able)
    return(<>
     
-    </>)
-}
+    </>)}
 export default Location
