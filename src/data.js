@@ -25,3 +25,9 @@ export const infoUser = {
 }
 export const userClothingRegistration = {spring:[],summer:[],fall:[],winter:[],style:[]}
 export const userClothingModify = {springObj:{spring:[]},summerObj:{summer:[]},fallObj:{fall:[]},winterObj:{winter:[]},styleObj:{style:[]}}
+export class testcase {
+    constructor(email,seasonList){
+        this.email = email
+        this.seasonList = seasonList
+    }
+}

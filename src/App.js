@@ -10,17 +10,17 @@ import HomePage from "./test3/HomePage"
 import MyClothing from "./refactoring/MyClothing"
 import Information from "./refactoring/Information"
 import TestCookie from "./test4/TestCookie"
-import {ReactQueryDevtools} from "react-query/devtools"
+// import {ReactQueryDevtools} from "react-query/devtools"
 import Location from "./test5/Location"
 import Arraytest from "./test6/Arraytest"
 import Findtest from "./test6/Findtest"
 import Chat from "./test7/chat"
+import Crypto from "./test8/crypto"
 const priceData = (event,setPrice) => {setPrice(event.target.value)}
 export default function App() {
 const [price , setPrice] = useState(null)
-console.log(1)
 return (<>
-<ReactQueryDevtools initialIsOpen={true}/>
+{/* <ReactQueryDevtools initialIsOpen={true}/> */}
     <Routes>
     <Route path="/" element={<PublicPage/>}/>
     <Route path="/arr" element={<Arraytest/>} /> 
@@ -40,4 +40,5 @@ return (<>
     </Route>
     <Route path="/pravite" element={<PravitePage/>}/>
     <Route path="/chatTest" element={<Chat/>}/>
+    <Route path="/crypto" element={<Crypto/>}/>
     </Routes></>)}
