@@ -36,6 +36,7 @@ const MyClothing = () => {
   e.preventDefault()
   try {
     const userClothing = new testcase("email",addStyleList)
+    // console.log(userClothing)
     setMessage(await(await axios.post('/my-clothes',userClothing)).data)
     if(Object.keys(message).length===2){
       alert(message.errorMessage)

@@ -17,7 +17,7 @@ const stock = createSlice({
 
 const registration = createSlice({
     name:"registration",
-    initialState:{spring:[],summer:[],fall:[],winter:[],style:[]},
+    initialState:{spring:[],summer:[],fall:[],winter:[]},
     reducers:{
         addStyle(state,action){
       state[action.payload.list].push(action.payload.value)
@@ -35,12 +35,22 @@ const modify = createSlice({
     name:"modify",
     initialState:{spring:[],summer:[],fall:[],winter:[],style:[]},
     reducers:{
-
+        addStyle1(state,action){
+            state[action.payload.list].push(action.payload.value)
+              },
+              deduplicationStyle1(state,action){
+                  state[action.payload.list].filter((element,index)=>state[action.payload.list].indexOf(element)===index)
+              }
+              ,
+              removeStyle1(state,action){
+                  state[action.payload.list].splice(state[action.payload.list].indexOf(action.payload.value),1)
+              }
     }
 })
 export const{inputData} = data.actions
 export const{stack} = stock.actions
 export const{addStyle,removeStyle,deduplicationStyle} = registration.actions
+export const{addStyle1,removeStyle1,deduplicationStyle1} = modify.actions
 export default configureStore({
     reducer:{
    orUser : data.reducer,
