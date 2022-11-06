@@ -1,0 +1,21 @@
+import { Route, Routes } from "react-router-dom"
+import Border from "./Border"
+import Comment from "./Comment"
+import Write from "./Write"
+import WritingLetter from "./WritingLetter"
+function App() {
+  return (
+    <>
+    <Routes>
+      <Route path="/" element={<Border/>}>
+        <Route path=":index" element={null}/>
+      </Route>
+      <Route path="/detail/:index" element={<WritingLetter/>}>
+      <Route path="comment" element={<Comment/>}/>
+      </Route>
+      <Route path="/detail/write" element={<Write/>}/>
+    </Routes>
+    </>
+  )}
+
+export default App

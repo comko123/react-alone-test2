@@ -16,12 +16,17 @@ import Arraytest from "./test6/Arraytest"
 import Findtest from "./test6/Findtest"
 import Chat from "./test7/chat"
 import Crypto from "./test8/crypto"
+import Border from "./test9/Border"
+import Comment from "./test9/Comment"
+import Write from "./test9/Write"
+import WritingLetter from "./test9/WritingLetter"
 const priceData = (event,setPrice) => {setPrice(event.target.value)}
 export default function App() {
 const [price , setPrice] = useState(null)
 return (<>
 {/* <ReactQueryDevtools initialIsOpen={true}/> */}
     <Routes>
+
     <Route path="/" element={<PublicPage/>}/>
     <Route path="/arr" element={<Arraytest/>} /> 
     <Route path="/moth" element={<MothPage/>}/>
@@ -38,6 +43,14 @@ return (<>
     <Route path = "give/:state" element={<h4> 나눔을 선택 하셨습니다.</h4>}/>
     <Route path = "recive/:state" element={<NumberFormat thousandSeparator={true} className="price" placeholder="대여비용" onBlur={(e)=>priceData(e,setPrice)}/>}/>
     </Route>
+    <Route path="/border" element={<Border/>}>
+        <Route path=":index" element={null}/>
+      </Route>
+      <Route path="/detail/:index" element={<WritingLetter/>}>
+      <Route path="comment" element={<Comment/>}/>
+      </Route>
+      <Route path="/detail/write" element={<Write/>}/>
+
     <Route path="/pravite" element={<PravitePage/>}/>
     <Route path="/chatTest" element={<Chat/>}/>
     <Route path="/crypto" element={<Crypto/>}/>
