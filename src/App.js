@@ -20,6 +20,7 @@ import Border from "./test9/Border"
 import Comment from "./test9/Comment"
 import Write from "./test9/Write"
 import WritingLetter from "./test9/WritingLetter"
+import Imp from "./Imp"
 const priceData = (event,setPrice) => {setPrice(event.target.value)}
 export default function App() {
 const [price , setPrice] = useState(null)
@@ -28,6 +29,7 @@ return (<>
     <Routes>
 
     <Route path="/" element={<PublicPage/>}/>
+    <Route path="/imp" element={<Imp/>}/>
     <Route path="/arr" element={<Arraytest/>} /> 
     <Route path="/moth" element={<MothPage/>}/>
     <Route path="/weth" element={<WethPage/>}/>

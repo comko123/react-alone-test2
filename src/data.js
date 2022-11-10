@@ -37,3 +37,74 @@ export class testcase2 {
     this.seasonList = seasonList
     }
 }
+
+
+export const userSelect = {성별:[],연령:[],신장:[],체중:[],스타일:[]}
+export const userClientInput = {id:[],email:[],password:[],password2:[],nickname:[]}
+export const wheather = JSON.parse(sessionStorage.getItem("wheatherInfo"))
+export const userLoginInfo = JSON.parse(sessionStorage.getItem("login_information"))
+export const imgListToSever = JSON.parse(sessionStorage.getItem("imgList"))
+export const no2ImData = JSON.parse(sessionStorage.getItem("No2Implements"))
+export const no3ImData = JSON.parse(sessionStorage.getItem("No3Implements"))
+
+export const selectUserData = {
+    연령: ["10 ~ 19세","20 ~ 29세","30 ~ 39세","40 ~ 49세","50세 이상"],
+    성별:["남성","여성"],
+    신장: ["156 ~ 160cm","160 ~ 165cm","165 ~ 170cm","170 ~ 175cm","175이상"],
+    체중: ["45 ~ 55kg","56 ~ 65kg","66 ~ 75kg","76 ~ 85kg","85kg 이상"],
+}
+export const selectUserCheck= {
+  스타일:["빈티지","댄디","캐주얼","놈코어","스트릿"]
+}
+export const inputTypeAndPalcehorder = {
+    email:["text","E-mail"],
+    password:["password","비밀번호"]
+}
+export const no1Data = {
+  login_information:userLoginInfo?.gender,
+  imgList:imgListToSever,
+  img_list:false,
+  gender:sessionStorage.getItem("gender")
+}
+export class infotomyinfo{
+  constructor(...rest){
+    this.lowTemp=rest[0]
+    this.highTemp=rest[1]
+    this.gender=rest[2]
+  }
+}
+export class infotomyinfo2{
+  constructor(...rest){
+    this.lowTemp=rest[0]
+    this.highTemp=rest[1]
+    this.email=rest[2]
+  }
+}
+export class signInfo {
+  constructor(...rest){
+this.email = rest[0]
+this.password = rest[1]
+this.gender = rest[2]
+this.age = rest[3]
+this.height = rest[4]
+this.weight = rest[5]
+this.styleList = rest[6]
+  }
+}
+export class userInfoRegistration {
+  constructor(email,seasonList){
+      this.email = email
+      this.seasonList = seasonList
+  }}
+
+export class content {
+  constructor(nickname,body){
+      this.nickname=nickname
+      this.body=body
+  }}  
+export class articles {
+  constructor(title,content){
+    this.title=title
+    this.content=content
+  }
+}  
