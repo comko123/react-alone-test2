@@ -25,7 +25,7 @@ export default function  Information() {
     const selectData = Object.keys(addStyleList)
     const dispatch = useDispatch()
     return (<><h3>내정보 수정하기</h3>
-<h5>마이페이지&gt;내정보 수정하기</h5>
+<h5>마이페이지 &gt; 내정보 수정하기</h5>
 {userInfo.map((item,index)=>{
     return <div key={index}>
     {userSeasonStyle(userInfo[index],infoUser[item],selectData[index],dispatch,addStyleList)}
