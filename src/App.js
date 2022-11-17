@@ -46,9 +46,9 @@ return (<>
     <Route path = "recive/:state" element={<NumberFormat thousandSeparator={true} className="price" placeholder="대여비용" onBlur={(e)=>priceData(e,setPrice)}/>}/>
     </Route>
     <Route path="/border" element={<Border/>}>
-        <Route path=":index" element={null}/>
-      </Route>
-      <Route path="/detail/:index" element={<WritingLetter/>}>
+    <Route path=":index" element={null}/>
+    </Route>
+    <Route path="/detail/:index" element={<WritingLetter/>}>
       <Route path="comment" element={<Comment/>}/>
       </Route>
       <Route path="/detail/write" element={<Write/>}/>
