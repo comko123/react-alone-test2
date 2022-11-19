@@ -20,7 +20,9 @@ import Border from "./test9/Border"
 import Comment from "./test9/Comment"
 import Write from "./test9/Write"
 import WritingLetter from "./test9/WritingLetter"
-import Imp from "./Imp"
+import Imp from "./test6/Imp"
+import Imp1 from "./test7/Imp1"
+import Imp2 from "./test8/Imp2"
 const priceData = (event,setPrice) => {setPrice(event.target.value)}
 export default function App() {
 const [price , setPrice] = useState(null)
@@ -30,6 +32,8 @@ return (<>
 
     <Route path="/" element={<PublicPage/>}/>
     <Route path="/imp" element={<Imp/>}/>
+    <Route path="/imp1" element={<Imp1/>}/>
+    <Route path="/imp2" element={<Imp2/>}/>
     <Route path="/arr" element={<Arraytest/>} /> 
     <Route path="/moth" element={<MothPage/>}/>
     <Route path="/weth" element={<WethPage/>}/>
