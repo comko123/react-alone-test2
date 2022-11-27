@@ -27,7 +27,6 @@ export default function App() {
 const [price , setPrice] = useState(null)
 return (<>
     <Routes>
-
     <Route path="/" element={<PublicPage/>}/>
     <Route path="/imp" element={<Imp/>}/>
     <Route path="/imp1" element={<Imp1/>}/>
@@ -54,7 +53,6 @@ return (<>
       <Route path="comment" element={<Comment/>}/>
       </Route>
       <Route path="/detail/write" element={<Write/>}/>
-
     <Route path="/pravite" element={<PravitePage/>}/>
     <Route path="/chatTest" element={<Chat/>}/>
     <Route path="/crypto" element={<Crypto/>}/>
