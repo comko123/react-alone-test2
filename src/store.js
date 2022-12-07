@@ -1,5 +1,4 @@
 import { configureStore ,createSlice} from "@reduxjs/toolkit"
-// import { userClothingRegistration } from "./data"
 
 const data = createSlice({
 name : "data",
